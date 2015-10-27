@@ -37,11 +37,12 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+/*
+Unfortunately, Underscores builds the "mobile" resolution into the styles below
+and separates out the wider resolutions in a media queries. Trying to invert this
+broke the primary menu button. So, TODO: Fix the media queries for navigation!
+*/
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
 }
 
 .main-navigation ul {
@@ -52,13 +53,14 @@ a:active {
 }
 
 .main-navigation li {
-	float: left;
-	position: relative;
+
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	text-transform: uppercase;
+	color: @headercolor;
 }
 
 .main-navigation ul ul {
@@ -116,15 +118,6 @@ a:active {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: block;
-	}
-}
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,

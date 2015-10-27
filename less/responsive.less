@@ -1,0 +1,42 @@
+@import (once) "utils";
+@import (once) "vars";
+@import (once) "mixins";
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+
+	#masthead{
+		max-height: @headheight;
+
+		.main-navigation{
+			height: @headheight;
+			position: absolute;
+			top: 0;
+			width: @bodymaxwidth;
+
+			.menu-main-menu-container{
+				height: 100%;
+
+				ul {
+					display: flex;
+					flex-direction: row;
+					justify-content: flex-end;
+					align-items: center;
+					height: 100%;
+
+					li {
+						display: inline-block;
+						text-align: center;
+						min-width: @navwidth;
+						margin: 0 12px;
+					}
+				}
+			}
+
+		}
+	}
+
+
+}

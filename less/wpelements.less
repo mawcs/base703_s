@@ -174,10 +174,20 @@ object {
 #masthead{
 	background-color: @headerbg;
 	margin-bottom: @blockmargin;
+
+	.site-header-content{
+		max-width: @bodymaxwidth;
+		margin-left: auto;
+		margin-right: auto;//TODO this "Centering" should be put in a mixin;
+
+		.site-description{
+			display: none;
+		}
+	}
 }
 
 #content{
-	max-width: 1280px;
+	max-width: @bodymaxwidth;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
@@ -188,7 +198,7 @@ object {
 	#primary{
 		flex-grow: 5;
 
-		max-width: 960px;
+		max-width: @contentmaxwidth;
 		min-width: 600px;
 		padding: @blockmargin;
 
@@ -257,7 +267,7 @@ object {
 		background: @contentbg;
 		flex-grow: 3;
 
-		max-width: 320px;
+		max-width: @sidebarmaxwidth;
 		min-width: 180px;
 		padding: @blockmargin;
 
@@ -338,7 +348,7 @@ object {
 	}
 
 	.footer-content{
-		max-width: 1280px;
+		max-width: @bodymaxwidth;
 		margin-left: auto;
 		margin-right: auto;
 
@@ -368,7 +378,7 @@ object {
 			justify-content: space-between;
 			align-items: center;
 
-			max-width: 1280px;
+			max-width: @bodymaxwidth;
 			margin-left: auto;
 			margin-right: auto;
 			height: 100%;
