@@ -171,6 +171,11 @@ object {
 /*--------------------------------------------------------------
 ## Blocks
 --------------------------------------------------------------*/
+#masthead{
+	background-color: @headerbg;
+	margin-bottom: @blockmargin;
+}
+
 #content{
 	max-width: 1280px;
 	margin-left: auto;
@@ -185,7 +190,7 @@ object {
 
 		max-width: 960px;
 		min-width: 600px;
-		padding: 56px;
+		padding: @blockmargin;
 
 		background: @contentbg;
 
@@ -254,7 +259,7 @@ object {
 
 		max-width: 320px;
 		min-width: 180px;
-		padding: 56px;
+		padding: @blockmargin;
 
 		min-height: 100%;
 
@@ -312,7 +317,7 @@ object {
 }
 
 #colophon{
-	margin-top: @footermargin;
+	margin-top: @blockmargin;
 	background: @footerbg;
 	min-height: @footerheight;
 	color: @footercolor;
