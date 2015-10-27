@@ -258,10 +258,54 @@ object {
 
 		min-height: 100%;
 
+		h2{
+			margin-top: 24px;
+			font-size: 0.9rem;
+			color: lighten(@textcolor, 40%);
+		}
+
 		ul{
 			list-style: none;
 			padding-left: 0;
 			margin-left: 0;
+
+			li{
+				margin: 0.4em 0;
+			}
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		li.recentcomments{
+
+
+			.comment-author-link{
+				font-size: 0.9rem;
+				display: block;
+			}
+		}
+
+		.widget_calendar{
+
+			table{
+
+				caption, tfoot, tfoot a{
+					color: lighten(@textcolor, 40%);
+				}
+
+				thead{
+					color: lighten(@textcolor, 60%);
+				}
+
+				tbody{
+					color: lighten(@textcolor, 30%);
+					td{
+						text-align: center;
+					}
+				}
+			}
 		}
 	}
 }
