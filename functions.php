@@ -150,3 +150,14 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+function alter_comment_form_fields($fields){
+	$fields['url'] = '';  //removes website field
+
+	return $fields;
+}
+
+add_filter('comment_form_default_fields','alter_comment_form_fields');
+
+?>

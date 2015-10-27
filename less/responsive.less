@@ -2,7 +2,7 @@
 @import (once) "vars";
 @import (once) "mixins";
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 50em) {
 	.menu-toggle {
 		display: none;
 	}
@@ -14,7 +14,8 @@
 			height: @headheight;
 			position: absolute;
 			top: 0;
-			width: @bodymaxwidth;
+			width: 100%;
+			max-width: @bodymaxwidth;
 
 			.menu-main-menu-container{
 				height: 100%;
@@ -29,8 +30,7 @@
 					li {
 						display: inline-block;
 						text-align: center;
-						min-width: @navwidth;
-						margin: 0 12px;
+						margin: 0 18px;
 					}
 				}
 			}

@@ -22,15 +22,32 @@ body {
 }
 
 blockquote:before,
+q:before {
+	font-family: serif;
+	color: @footercolor;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	position: relative;
+	top: 0.35em;
+	display: inline;
+	float: left;
+}
+
 blockquote:after,
-q:before,
 q:after {
 	content: "";
 }
 
 blockquote,
 q {
-	quotes: "" "";
+	width: 80%;
+	background: fade(@footercolor, 20%);
+	border-left: 2px solid @footercolor;
+	margin: 1.5em 10px;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
 }
 
 hr {
@@ -42,7 +59,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 0.5em;
 }
 
 ul {
