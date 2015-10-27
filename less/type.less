@@ -10,10 +10,10 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: @textcolor;
+  font-family: @basefont;
   font-size: 16px;
-  font-size: 1rem;
+  font-size: @basetypesize;
   line-height: 1.5;
 }
 
@@ -47,7 +47,7 @@ address {
 
 pre {
   background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-family: @monofont;
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.6;
@@ -61,7 +61,7 @@ code,
 kbd,
 tt,
 var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-family: @monofont;
   font-size: 15px;
   font-size: 0.9375rem;
 }

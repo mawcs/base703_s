@@ -9,18 +9,21 @@
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
+
 a {
-  color: royalblue;
+  color: @linkcolor;
+}
+
+a:hover, a:focus {
+  color: lighten(@linkcolor, 20%);
 }
 
 a:visited {
-  color: purple;
+  color: darken(@linkcolor, 20%);
 }
 
-a:hover,
-a:focus,
 a:active {
-  color: midnightblue;
+  color: spin(@linkcolor, 180);
 }
 
 a:focus {
