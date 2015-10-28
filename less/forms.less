@@ -31,7 +31,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	outline: 2px dotted fade(@buttonhoverbgcolor, 50%);
+	outline: 2px solid fade(@buttonhoverbgcolor, 50%);
 }
 
 input[type="text"],
@@ -42,7 +42,7 @@ input[type="search"],
 textarea {
 	border: 2px solid @buttonbordercolor;
 	background: transparent;
-
+	color: @buttonbgcolor;
 }
 
 input[type="text"]:focus,
@@ -52,7 +52,7 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
 	outline: 2px solid fade(@buttonhoverbgcolor, 70%);
-	background: @buttonbgcolor;
+	background: fade(@buttonbordercolor, 50%);
 }
 
 input[type="text"],
@@ -73,5 +73,19 @@ p{
 	label{
 		color: @buttonbgcolor;
 		display: block;
+	}
+}
+
+.entry-content{
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	textarea {
+		border: 2px solid fade(@buttonbgcolor, 25%);
+		background: transparent;
+		color: @buttonbgcolor;
 	}
 }
