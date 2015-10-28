@@ -17,16 +17,4 @@ wp-content/plugins/hello.php
 /readme.html
 /license.txt
 
-/less/customer_theme.css
-/less/type.css
-/less/homepage.css
-/less/vars.css
-/style.css
-/less/wpelements.css
-/less/accessibility.css
-/less/forms.css
-/less/navigation.css
-/less/utils.css
-/less/elements.css
-/less/normalize.css
-/less/mixins.css
+/less/*.css
