@@ -107,8 +107,49 @@ function base703_s_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+			'name' => __( 'Footer Widget Area 1', 'base703_s' ),
+			'id' => 'footer-widget-area-1',
+			'description' => __( 'Footer widget area 1 of 4', 'base703_s' ),
+			'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+			'name' => __( 'Footer Widget Area 2', 'base703_s' ),
+			'id' => 'footer-widget-area-2',
+			'description' => __( 'Footer widget area 2 of 4', 'base703_s' ),
+			'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+			'name' => __( 'Footer Widget Area 3', 'base703_s' ),
+			'id' => 'footer-widget-area-3',
+			'description' => __( 'Footer widget area 3 of 4', 'base703_s' ),
+			'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+			'name' => __( 'Footer Widget Area 4', 'base703_s' ),
+			'id' => 'footer-widget-area-4',
+			'description' => __( 'Footer widget area 4 of 4', 'base703_s' ),
+			'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'base703_s_widgets_init' );
+
 
 /**
  * Enqueue scripts and styles.

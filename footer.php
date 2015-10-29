@@ -18,7 +18,26 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="footer-content">
 			<div class="footer-widgets">
-&nbsp;
+				<?php if ( is_active_sidebar('footer-widget-area-1')) : ?>
+					<div class="widget-area">
+						<?php dynamic_sidebar( 'footer-widget-area-1' ); ?>
+					</div>
+				<?php endif ?>
+				<?php if ( is_active_sidebar('footer-widget-area-2')) : ?>
+					<div class="widget-area">
+						<?php dynamic_sidebar( 'footer-widget-area-2' ); ?>
+					</div>
+				<?php endif ?>
+				<?php if ( is_active_sidebar('footer-widget-area-3')) : ?>
+					<div class="widget-area">
+						<?php dynamic_sidebar( 'footer-widget-area-3' ); ?>
+					</div>
+				<?php endif ?>
+				<?php if ( is_active_sidebar('footer-widget-area-4')) : ?>
+					<div class="widget-area">
+						<?php dynamic_sidebar( 'footer-widget-area-4' ); ?>
+					</div>
+				<?php endif ?>
 			</div>
 			&nbsp;
 		</div>
