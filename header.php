@@ -29,11 +29,30 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-header-content">
 			<div class="site-branding">
+
 				<?php if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+					<?php if ( get_theme_mod( 'logo' ) ) : ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+							<img src="<?php echo get_theme_mod( 'logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+						</a>
+					<?php else : ?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php endif; ?>
+
 				<?php else : ?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+
+					<?php if ( get_theme_mod( 'logo' ) ) : ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+							<img src="<?php echo get_theme_mod( 'logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+						</a>
+					<?php else : ?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php endif; ?>
+
 				<?php endif; ?>
+
+
 				<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 			</div><!-- .site-branding -->
 
