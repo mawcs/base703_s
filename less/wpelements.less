@@ -175,6 +175,10 @@ object {
 	background-color: @headerbg;
 	margin-bottom: @blockmargin;
 
+	.fadeIn;
+	.animated;
+	.anim-params(1s, 0.5s);
+
 	.site-header-content{
 		max-width: @bodymaxwidth;
 		margin-left: auto;
@@ -185,7 +189,7 @@ object {
 			#site-logo{
 
 				img{
-					width: 115px;
+					width: 125px;
 				}
 			}
 		}
@@ -205,13 +209,16 @@ object {
 	justify-content: space-between;
 	align-items: stretch;
 
+	.fadeIn;
+	.animated;
+	.anim-params(1s, 0.5s);
+
 	#primary{
 		flex-grow: 5;
-
 		max-width: @contentmaxwidth;
 		min-width: 600px;
 		padding: @blockmargin;
-
+		border-radius: 2px;
 		background: @contentbg;
 
 		#main{
@@ -366,6 +373,10 @@ object {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: stretch;
+
+	.fadeIn;
+	.animated;
+	.anim-params(1s, 0.5s);
 
 	a{
 		color: @footerlinkcolor;

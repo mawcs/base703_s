@@ -60,7 +60,46 @@ broke the primary menu button. So, TODO: Fix the media queries for navigation!
 	display: block;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: @headercolor;
+	color: fade(@headercolor, 80%);
+
+	.fadeIn;
+	.animated;
+	.anim-params(1s, 0.5s);
+}
+
+.main-navigation a::before,
+.main-navigation a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.main-navigation a::before{
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.main-navigation a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.main-navigation a:hover::before,
+.main-navigation a:hover::after,
+.main-navigation a:focus::before,
+.main-navigation a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
 }
 
 .main-navigation ul ul {
@@ -87,6 +126,11 @@ broke the primary menu button. So, TODO: Fix the media queries for navigation!
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
+	color: @headercolor;
+}
+
+.main-navigation li:hover > a::after,
+.main-navigation li.focus > a::after {
 }
 
 .main-navigation ul ul :hover > a,
