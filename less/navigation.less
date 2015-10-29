@@ -56,6 +56,10 @@ broke the primary menu button. So, TODO: Fix the media queries for navigation!
 
 }
 
+.main-navigation li.current-menu-item a{
+	color: @headercolor;
+}
+
 .main-navigation a {
 	display: block;
 	text-decoration: none;
@@ -95,7 +99,9 @@ broke the primary menu button. So, TODO: Fix the media queries for navigation!
 .main-navigation a:hover::before,
 .main-navigation a:hover::after,
 .main-navigation a:focus::before,
-.main-navigation a:focus::after {
+.main-navigation a:focus::after,
+.main-navigation li.current-menu-item a::before,
+.main-navigation li.current-menu-item a::after{
 	opacity: 1;
 	-webkit-transform: translateX(0px);
 	-moz-transform: translateX(0px);
