@@ -47,19 +47,19 @@
 	</header><!-- #masthead -->
 
 	<section id="hero">
-		<h1>HERO</h1>
+		<!--<h1>HERO</h1>-->
 	</section>
 
 	<section id="current-content">
-		<h1>CURRENT-CONTENT</h1>
+		<!--<h1>CURRENT-CONTENT</h1>-->
 	</section>
 
 	<section id="homepage-video">
-		<h1>VIDEO</h1>
+		<!--<h1>VIDEO</h1>-->
 	</section>
 
 	<footer id="homepage-footer">
-		<h1>FOOTER</h1>
+		<!--<h1>FOOTER</h1>-->
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			<img src="<?php echo get_theme_mod( 'logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 		</a>
