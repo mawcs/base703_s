@@ -3,12 +3,13 @@
 @import (once) "vars";
 @import (once) "mixins";
 
+@import "../homepage/font/freestyle-script";
+
 #homepage{
-	background-color: black;
 
 	#masthead{
 		margin-bottom: 0;
-
+		background-color: black;
 
 		#site-logo{
 
@@ -20,13 +21,63 @@
 	}
 
 	#hero{
-		height: calc(34em + 42px);
-		min-height: calc(34em + 42px);
+		@herocolor: white;
+
+		background-color: black;
+		height: calc(8em + 42px);
+		min-height: calc(8em + 42px);
 		background-image: url(../homepage/img/vlcsnap-2015-10-22-12h24m21s691.png);
 		background-repeat: no-repeat;
-		background-attachment: fixed;
 		background-position: center 42px ;
 		background-size: cover ;
+		padding-top: 128px;
+		color: @herocolor;
+
+		.hero-content{
+			max-width: 1280px;
+			margin-left: auto;
+			margin-right: auto;
+
+			position: relative;
+			text-align: center;
+			vertical-align: baseline;
+
+			.call-to-action-block{
+				width: 29em;
+
+				.heroheader{
+					border: 1px @herocolor;
+					border-top: solid;
+					border-bottom: solid;
+
+					span{
+						margin: 0.1em;
+					}
+
+					.fl, .and{
+						font-family: "Freestyle Script", cursive;
+						line-height: 1.1em;
+						padding-bottom: 0.1em;
+					}
+
+					.pretext{
+						font-size: 1.7rem;
+					}
+
+					.fl{
+						display: inline-block;
+						font-size: 4.5rem;
+						transform: translateY(0.05em);
+					}
+
+					.and{
+						font-size: 2rem;
+					}
+				}
+			}
+
+
+		}
 	}
 
 	#hero.altbg{

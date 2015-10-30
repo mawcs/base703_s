@@ -49,7 +49,20 @@
 	</header><!-- #masthead -->
 
 	<section id="hero">
-		<!--<h1>HERO</h1>-->
+		<div class="hero-content">
+			<div class="call-to-action-block">
+				<div class="heroheader">
+					<span class="pretext">The</span> <span class="fl forgive">Forgive</span><span class="and">&</span><span class="fl Live">Live</span><span class="pretext">Experience</span>
+				</div>
+				<div class="herobuttons">
+					<a class="btn primary">Book Now</a>
+					<a class="btn secondary">Learn More</a>
+				</div>
+				<div class="hero-subtext">
+					<p>Keynote stories of forgiveness, encouragement, and inspiration.</p>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<section id="current-content">
