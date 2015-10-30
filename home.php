@@ -20,6 +20,8 @@
 
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/less/homepage.css">
+
 	<?php wp_head(); ?>
 </head>
 
