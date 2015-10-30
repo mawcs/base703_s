@@ -173,7 +173,9 @@ object {
 --------------------------------------------------------------*/
 #masthead{
 	background-color: @headerbg;
-	margin-bottom: @blockmargin;
+	position: fixed;
+	width: 100%;
+	z-index: 99999;
 
 	.fadeIn;
 	.animated;
@@ -189,7 +191,7 @@ object {
 			#site-logo{
 
 				img{
-					width: 125px;
+					width: 125px; //TODO resize on scroll
 				}
 			}
 		}
@@ -220,6 +222,7 @@ object {
 		padding: @blockmargin;
 		border-radius: 2px;
 		background: @contentbg;
+		margin-top: @blockmargin + 42px;
 
 		#main{
 
@@ -310,6 +313,7 @@ object {
 		padding: @blockmargin;
 
 		min-height: 100%;
+		margin-top: @blockmargin + 42px;
 
 		h2{
 			margin-top: 24px;
