@@ -4,7 +4,33 @@
 @import (once) "mixins";
 
 #homepage{
+	background-color: black;
+
+	#masthead{
+		margin-bottom: 0;
 
 
+		#site-logo{
+
+			img{
+
+				width: 200px;
+			}
+		}
+	}
+
+	#hero{
+		height: calc(34em + 42px);
+		min-height: calc(34em + 42px);
+		background-image: url(../homepage/img/vlcsnap-2015-10-22-12h24m21s691.png);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center 42px ;
+		background-size: cover ;
+	}
+
+	#hero.altbg{
+		background-image: url(../homepage/img/vlcsnap-2015-10-06-13h03m52s229.png);
+	}
 
 }
