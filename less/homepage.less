@@ -24,8 +24,8 @@
 		@herocolor: white;
 
 		background-color: black;
-		height: calc(8em + 42px);
-		min-height: calc(8em + 42px);
+		height: 40em;
+		min-height: 40em;
 		background-image: url(../homepage/img/vlcsnap-2015-10-22-12h24m21s691.png);
 		background-repeat: no-repeat;
 		background-position: center 42px ;
@@ -38,17 +38,18 @@
 			margin-left: auto;
 			margin-right: auto;
 
-			position: relative;
 			text-align: center;
 			vertical-align: baseline;
 
 			.call-to-action-block{
 				width: 29em;
+				position: relative;
+				top: 5em;
 
 				.heroheader{
-					border: 1px @herocolor;
-					border-top: solid;
-					border-bottom: solid;
+					border-color: @herocolor;
+					border-top: 1px solid;
+					border-bottom: 1px solid;
 
 					span{
 						margin: 0.1em;
