@@ -51,7 +51,7 @@
 		</div>
 	</header><!-- #masthead -->
 
-	<section id="hero">
+	<section id="hero" class="altbg">
 		<div class="hero-content">
 			<div class="call-to-action-block">
 				<div class="heroheader">
@@ -69,8 +69,44 @@
 	</section>
 
 	<section id="current-content">
+		<div class="current-wrapper">
+			<div class="current-items">
+                <div class="current-event">
+	                <h2>Upcoming Events</h2>
+	                <div>
+		                <h3>Replace me with WP stuff</h3>
+	                </div>
+                </div>
+				<div class="current-podcast">
+					<h2>Latest Podcast</h2>
+					<div>
+						<h3>Replace me with WP stuff</h3>
+					</div>
+				</div>
+				<div class="current-podcast">
+					<h2>From the Blog</h2>
+					<div>
+						<h3>Replace me with WP stuff</h3>
+					</div>
+				</div>
+			</div>
+			<div class="testimonials">
+				<div class="testimonial-wrapper">
+					<blockquote>
+						<p class="quotetext">Replace me with WP stuff</p>
+						<p class="byline">The Person</p>
+					</blockquote>
+					<div class="testimonials-more">
+						<a href="#" class="btn secondary">More Testimonials</a>
+						<div class="pns">
+							<a href="#" class="pn left nonext">&#139;</a>
+							<a href="#" class="pn right">&#155;</a>
+						</div>
 
-		<!--<h1>CURRENT-CONTENT</h1>-->
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<section id="homepage-video">

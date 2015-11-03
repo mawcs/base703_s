@@ -6,6 +6,18 @@
 @import "../homepage/font/freestyle-script";
 
 #homepage{
+	a{
+		color: @buttonbordercolor;
+		text-decoration: none;
+	}
+
+	a:hover, a:visited, a:active{
+		color: darken(@buttonbordercolor, 30%);
+	}
+
+	.btn:visited{
+		color: @buttonbordercolor;
+	}
 
 	@mastheadtransitiontime: 0.5s;
 
@@ -167,18 +179,145 @@
 
 	#current-content{
 		margin-top: 45em;
-		min-height: 40em;
+		padding: 3em;
+		height: 100%;
 		background-color: @altcolor;
-		@shadow: 0px -12px 24px rgba(0, 0, 0, 0.4);
+		background-image: url(../homepage/img/crowd-of-people.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		background-attachment: fixed;
+		color: @buttonbordercolor;
 
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+		justify-content: space-around;
+
+		@shadow: 0px -12px 24px rgba(0, 0, 0, 0.4);
 		-webkit-box-shadow: @shadow;
 		-moz-box-shadow:    @shadow;
 		box-shadow:         @shadow;
+
+		.current-wrapper{
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+			justify-content: space-between;
+			width: 100%;
+			height: 100%;
+			max-width: @bodymaxwidth;
+			margin-left: auto;
+			margin-right: auto;
+
+			h2, h3{
+				margin-top: 0;
+				font-weight: 300;
+			}
+
+			h2{
+				font-size: 2em;
+				text-align: center;
+			}
+
+			.current-items{
+				flex-basis: 60%;
+			}
+
+			.testimonials{
+				flex-basis: 40%;
+				border-left: 1px solid fade(@buttonbordercolor, 30%);
+				height: 100%;
+
+				.testimonial-wrapper{
+					padding: 2em;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: stretch;
+					justify-content: space-between;
+
+					blockquote{
+						background: transparent;
+						border: none;
+						border-left: none;
+						font-family: "Freestyle Script", cursive;
+						font-size: 4rem;
+						margin: 0;
+						padding: 0.7em;
+						width: 100%;
+						//clear: none;
+						//quotes: "\201C""\201D""\2018""\2019";
+						background-image: url(../homepage/img/bq.png);
+						background-repeat: no-repeat;
+						background-position: top left;
+						background-size: 25%;
+
+						p{
+							margin: 0;
+							padding: 0;
+						}
+
+						.byline{
+							display: block;
+							width: 100%;
+							font-size: 0.7em;
+							text-align: right;
+							color: fade(@buttonbordercolor, 50%);
+						}
+						.byline:before{
+							content: "\2014";
+						}
+					}
+
+					.testimonials-more{
+						clear: both;
+
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						justify-content: space-around;
+						max-height: 48px;
+
+						.btn{
+							font-size: 1.2em
+						}
+
+						.pns{
+
+							.pn{
+								font-size: 4em;
+								line-height: 0.5em;
+								margin-left: 12px;
+								margin-right: 12px;
+								cursor: pointer;
+							}
+
+							.pn:visited, .pn:active{
+								color: @buttonbordercolor;
+							}
+
+							.pn.nonext{
+								color: fade(@buttonbordercolor, 30%);
+								cursor: not-allowed;
+							}
+						}
+					}
+				}
+
+			}
+		}
+
 	}
 
 	#homepage-video{
 		min-height: 40em;
 		background-color: @maincolor;
+		background-image: url(../homepage/img/podium.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		background-attachment: fixed;
 	}
 	#homepage-footer{
 		min-height: 40em;
