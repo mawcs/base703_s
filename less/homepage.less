@@ -8,6 +8,9 @@
 #homepage{
 
 	#masthead{
+		position: fixed;
+		top: 0;
+		left: 0;
 		margin-bottom: 0;
 		background-color: black;
 		height: 64px;
@@ -35,10 +38,16 @@
 		min-height: 45em;
 		background-image: url(../homepage/img/vlcsnap-2015-10-22-12h24m21s691.png);
 		background-repeat: no-repeat;
-		background-position: center 64px ;
+		background-position: center 64px;
 		background-size: cover ;
+		//background-size: 100% auto;
 		padding-top: 128px;
 		color: @herocolor;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
 
 		.hero-content{
 			max-width: 1280px;
@@ -77,6 +86,7 @@
 
 					.pretext{
 						font-size: 1.7rem;
+						font-weight: 300;
 					}
 
 					.fl{
@@ -104,20 +114,45 @@
 				}
 
 				.hero-subtext{
-					font-size: 1.6em;
+					font-size: 1.7em;
+					font-weight: 300;
 
 					p{
 						margin: 0;
 					}
 				}
+
+
 			}
 
-
 		}
+
 	}
 
 	#hero.altbg{
 		background-image: url(../homepage/img/vlcsnap-2015-10-06-13h03m52s229.png);
+	}
+
+
+	#current-content{
+		margin-top: 45em;
+		min-height: 40em;
+
+		//TEMPORARY
+		background-color: blue;
+	}
+
+	#homepage-video{
+		min-height: 40em;
+
+		//TEMPORARY
+		background-color: green;
+	}
+	#homepage-footer{
+		min-height: 40em;
+
+		//TEMPORARY
+		background-color: violet;
 	}
 
 }
