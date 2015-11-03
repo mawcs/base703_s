@@ -7,6 +7,8 @@
 
 #homepage{
 
+	@mastheadtransitiontime: 0.5s;
+
 	#masthead{
 		position: fixed;
 		top: 0;
@@ -15,17 +17,39 @@
 		background-color: black;
 		height: 64px;
 		max-height: 64px;
+		transition: height @mastheadtransitiontime, max-height @mastheadtransitiontime;
 
 		.main-navigation{
 			height: 100%;
 			font-size: 1.1em;
+			transition: font-size @mastheadtransitiontime;
 		}
 
 		#site-logo{
 
 			img{
-
+				transition: width @mastheadtransitiontime;
 				width: 250px; //TODO resize on scroll
+			}
+		}
+	}
+
+	#masthead.stick{
+		height: 42px;
+		max-height: 42px;
+		transition: height @mastheadtransitiontime, max-height @mastheadtransitiontime;
+
+		.main-navigation{
+			height: 100%;
+			font-size: 0.9em;
+			transition: font-size @mastheadtransitiontime;
+		}
+
+		#site-logo{
+
+			img{
+				transition: width @mastheadtransitiontime;
+				width: 100px; //TODO resize on scroll
 			}
 		}
 	}
@@ -137,22 +161,21 @@
 	#current-content{
 		margin-top: 45em;
 		min-height: 40em;
+		background-color: @altcolor;
+		@shadow: 0px -12px 24px rgba(0, 0, 0, 0.4);
 
-		//TEMPORARY
-		background-color: blue;
+		-webkit-box-shadow: @shadow;
+		-moz-box-shadow:    @shadow;
+		box-shadow:         @shadow;
 	}
 
 	#homepage-video{
 		min-height: 40em;
-
-		//TEMPORARY
-		background-color: green;
+		background-color: @maincolor;
 	}
 	#homepage-footer{
 		min-height: 40em;
-
-		//TEMPORARY
-		background-color: violet;
+		background-color: @footerbg;
 	}
 
 }
