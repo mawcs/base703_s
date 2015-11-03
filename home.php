@@ -30,7 +30,13 @@
 <div id="homepage" >
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-header-content">
-			<div class="site-branding">
+
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span></span></button>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			</nav><!-- #site-navigation -->
+
+			<div class="site-branding"><!--TODO Fix the z-index issue-->
 
 				<?php if ( get_theme_mod( 'logo' ) ) : ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -42,10 +48,6 @@
 
 			</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span></span></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
 
