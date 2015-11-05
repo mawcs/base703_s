@@ -22,6 +22,7 @@
 	<script src="<?php bloginfo('template_directory'); ?>/homepage/js/p.js"></script>
 
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/homepage/font/freestyle-script.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/homepage/font/socicon.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/less/homepage.css">
 
 	<?php wp_head(); ?>
@@ -121,10 +122,47 @@ THis is stuff
 	</section>
 
 	<footer id="homepage-footer">
-		<!--<h1>FOOTER</h1>-->
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			<img src="<?php echo get_theme_mod( 'logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-		</a>
+		<div class="homepage-footer-wrapper">
+
+			<div class="footer-logo">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					<img src="<?php echo get_theme_mod( 'logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+				</a>
+			</div>
+
+			<div class="newsletter-signup">
+				<h2>Forgiveness and Living in your inbox.</h2>
+				<div class="newsletter-form">
+<!--					//TODO integrate with James' newsletter system.-->
+					<input type="text" placeholder="Name" name="newsletter-name" id="newsletter-name">
+					<input type="text" placeholder="Email" name="newsletter-email" id="newsletter-email">
+					<input type="submit" name="newsletter-submit" id="newsletter-submit" value="Sign Up">
+				</div>
+			</div>
+
+			<div class="social-icons">
+				<a href=""><span class="socicon socicon-facebook"></span></a>
+				<a href=""><span class="socicon socicon-twitter"></span></a>
+				<a href=""><span class="socicon socicon-google"></span></a>
+				<a href=""><span class="socicon socicon-youtube"></span></a>
+				<a href=""><span class="socicon socicon-vimeo"></span></a>
+				<a href="" class="cdbabylink"><span class="socicon cdbaby">&nbsp;</span></a>
+				<a href=""><span class="socicon socicon-soundcloud"></span></a>
+				<a href=""><span class="socicon socicon-rss"></span></a>
+			</div>
+
+			<div class="subfooter">
+				<span class="copyright">&copy;2015 Williamson Creative, LLC. DBA 703 Creative. All Rights Reserved</span>
+				<ul class="subnav">
+					<li><a href="">Sitemap</a></li>
+					<li><a href="">Privacy</a></li>
+					<li><a href="">Terms</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+
 	</footer>
 
 
