@@ -13,11 +13,11 @@ function phero(st){
 
 function stickmasthead(st){
     var $masthead = $("#masthead");
-    if (st < 0){
-        st = 0;
+    if (st < 160){
+        st = 160;
     }
 
-    if (st === 0){
+    if (st === 160){
         $masthead.removeClass("stick");
     }
     else{
