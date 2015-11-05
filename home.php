@@ -21,6 +21,7 @@
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/homepage/js/p.js"></script>
 
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/homepage/font/freestyle-script.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/less/homepage.css">
 
 	<?php wp_head(); ?>
