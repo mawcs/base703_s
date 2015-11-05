@@ -3,7 +3,6 @@
 @import (once) "vars";
 @import (once) "mixins";
 
-//@import "../homepage/font/freestyle-script";
 
 #homepage{
 	a{
@@ -15,7 +14,7 @@
 		color: darken(@buttonbordercolor, 30%);
 	}
 
-	.btn:visited{
+	.btn:visited, .btn:hover{
 		color: @buttonbordercolor;
 	}
 
@@ -32,7 +31,6 @@
 		transition: height @mastheadtransitiontime, max-height @mastheadtransitiontime;
 
 		.main-navigation{
-			//background: pink;//TEMPORARY
 			z-index: 9;
 			height: 100%;
 			font-size: 1.1em;
@@ -40,7 +38,6 @@
 		}
 
 		#site-logo{
-			//background: purple;//TEMPORARY
 			display: block;
 			width: 250px;
 			height: 150px;
@@ -79,7 +76,7 @@
 		background-color: black;
 		height: 45em;
 		min-height: 45em;
-		background-image: url(../homepage/img/vlcsnap-2015-10-22-12h24m21s691.png);
+		background-image: url(../homepage/img/jd_speaking.jpg);
 		background-repeat: no-repeat;
 		background-position: center 64px;
 		background-size: cover ;
@@ -93,7 +90,7 @@
 		z-index: -1;
 
 		.hero-content{
-			max-width: 1280px;
+			max-width: @bodymaxwidth;
 			margin-left: auto;
 			margin-right: auto;
 
@@ -173,16 +170,15 @@
 	}
 
 	#hero.altbg{
-		background-image: url(../homepage/img/vlcsnap-2015-10-06-13h03m52s229.png);
+		background-image: url(../homepage/img/jd_speaking_alt.jpg);
 	}
 
 
-	#current-content{
+	#currentstuff-block {
 		margin-top: 45em;
-		padding: 3em;
 		height: 100%;
 		background-color: @altcolor;
-		background-image: url(../homepage/img/crowd-of-people.png);
+		background-image: url(../homepage/img/crowd-of-people.jpg);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
@@ -200,124 +196,151 @@
 		box-shadow:         @shadow;
 
 		.current-wrapper{
-			display: flex;
-			flex-direction: row;
-			align-items: stretch;
-			justify-content: space-between;
 			width: 100%;
 			height: 100%;
-			max-width: @bodymaxwidth;
-			margin-left: auto;
-			margin-right: auto;
+			background-color: fade(@altcolor, 50%);
+			padding: 3em;
 
-			h2, h3{
-				margin-top: 0;
-				font-weight: 300;
-			}
-
-			h2{
-				font-size: 2em;
-				text-align: center;
-			}
-
-			.current-items{
-				flex-basis: 60%;
-			}
-
-			.testimonials{
-				flex-basis: 40%;
-				border-left: 1px solid fade(@buttonbordercolor, 30%);
+			.current-content{
+				display: flex;
+				flex-direction: row;
+				align-items: stretch;
+				justify-content: space-between;
+				width: 100%;
 				height: 100%;
+				max-width: @bodymaxwidth;
+				margin-left: auto;
+				margin-right: auto;
 
-				.testimonial-wrapper{
-					padding: 2em;
+
+				h2, h3{
+					margin-top: 0;
+					font-weight: 300;
+				}
+
+				h2{
+					font-size: 2em;
+					text-align: center;
+				}
+
+				.current-items{
+					flex-basis: 60%;
+				}
+
+				.testimonials{
+					flex-basis: 40%;
+					border-left: 1px solid fade(@buttonbordercolor, 30%);
 					height: 100%;
-					display: flex;
-					flex-direction: column;
-					align-items: stretch;
-					justify-content: space-between;
 
-					blockquote{
-						background: transparent;
-						border: none;
-						border-left: none;
-						font-family: "Freestyle Script", cursive;
-						font-size: 3rem;
-						margin: 0;
-						padding: 0.7em;
-						width: 100%;
-						//clear: none;
-						//quotes: "\201C""\201D""\2018""\2019";
-						background-image: url(../homepage/img/bq.png);
-						background-repeat: no-repeat;
-						background-position: top left;
-						background-size: 25%;
-
-						p{
-							margin: 0;
-							padding: 0;
-						}
-
-						.byline{
-							display: block;
-							width: 100%;
-							font-size: 0.7em;
-							text-align: right;
-							color: fade(@buttonbordercolor, 50%);
-						}
-						.byline:before{
-							content: "\2014";
-						}
-					}
-
-					.testimonials-more{
-						clear: both;
-
+					.testimonial-wrapper{
+						padding: 2em;
+						height: 100%;
 						display: flex;
-						flex-direction: row;
-						align-items: center;
-						justify-content: space-around;
-						max-height: 48px;
+						flex-direction: column;
+						align-items: stretch;
+						justify-content: space-between;
 
-						.btn{
-							font-size: 1.2em
+						blockquote{
+							background: transparent;
+							border: none;
+							border-left: none;
+							font-family: "Freestyle Script", cursive;
+							font-size: 3rem;
+							margin: 0;
+							padding: 0.7em;
+							width: 100%;
+							//clear: none;
+							//quotes: "\201C""\201D""\2018""\2019";
+							background-image: url(../homepage/img/bq.png);
+							background-repeat: no-repeat;
+							background-position: top left;
+							background-size: 25%;
+
+							p{
+								margin: 0;
+								padding: 0;
+							}
+
+							.byline{
+								display: block;
+								width: 100%;
+								font-size: 0.7em;
+								text-align: right;
+								color: fade(@buttonbordercolor, 50%);
+							}
+							.byline:before{
+								content: "\2014";
+							}
 						}
 
-						.pns{
+						.testimonials-more{
+							clear: both;
 
-							.pn{
-								font-size: 4em;
-								line-height: 0.5em;
-								margin-left: 12px;
-								margin-right: 12px;
-								cursor: pointer;
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+							justify-content: space-around;
+							max-height: 48px;
+
+							.btn{
+								font-size: 1.2em
 							}
 
-							.pn:visited, .pn:active{
-								color: @buttonbordercolor;
-							}
+							.pns{
 
-							.pn.nonext{
-								color: fade(@buttonbordercolor, 30%);
-								cursor: not-allowed;
+								.pn{
+									font-size: 4em;
+									line-height: 0.5em;
+									margin-left: 12px;
+									margin-right: 12px;
+									cursor: pointer;
+								}
+
+								.pn:visited, .pn:active{
+									color: @buttonbordercolor;
+								}
+
+								.pn.nonext{
+									color: fade(@buttonbordercolor, 30%);
+									cursor: not-allowed;
+								}
 							}
 						}
 					}
+
 				}
 
 			}
+
+
 		}
 
 	}
 
 	#homepage-video{
-		min-height: 40em;
-		background-color: @maincolor;
-		background-image: url(../homepage/img/podium.png);
+		min-height: 40em;//TEMPORARY
+		background-image: url(../homepage/img/podium.jpg);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
 		background-attachment: fixed;
+		width: 100%;
+		height: 100%;
+
+		.hompage-video-wrapper{
+			background-color: fade(@maincolor, 70%);
+			width: 100%;
+			height: 100%;
+			min-height: 40em;//TEMPORARY
+
+			.homepage-video-content{
+				width: 100%;
+				height: 100%;
+				max-width: @bodymaxwidth;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
 	}
 	#homepage-footer{
 		min-height: 40em;
