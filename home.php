@@ -141,7 +141,7 @@ THis is stuff
 			</div>
 
 			<div class="social-icons">
-				<!--					//TODO wire these up to James' social stuff-->
+				<!--//TODO wire these up to James' social stuff-->
 				<a href=""><span class="socicon socicon-facebook"></span></a>
 				<a href=""><span class="socicon socicon-twitter"></span></a>
 				<a href=""><span class="socicon socicon-linkedin"></span></a>
