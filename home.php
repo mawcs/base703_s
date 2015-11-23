@@ -76,9 +76,27 @@
 				<div class="current-items">
 					<div class="current-event">
 						<h2>Upcoming Events</h2>
-						<div>
-							<h3>Replace me with WP stuff</h3>
-						</div>
+						<?php
+
+						$catid = get_category_by_slug( 'events' );
+						$args = array(
+								'numberposts' => 1,
+								'offset' => 0,
+								'category' => $catid->term_id,
+								'orderby' => 'post_date',
+								'order' => 'DESC',
+								'post_type' => 'post',
+								'post_status' => 'publish',
+								'suppress_filters' => true );
+
+						$latest_event = wp_get_recent_posts( $args, ARRAY_A );
+						foreach($latest_event as $latest ){
+							echo '<div>'.
+									'<a href="'. get_permalink($latest["ID"]) .'"><h3>'. $latest["post_title"] .'</h3></a>'.
+									'<div class="register"><a href="'. get_permalink($latest["ID"]) .'">Register</a></div>'.
+								 '</div>';
+						}
+						?>
 					</div>
 					<div class="current-podcast">
 						<h2>Latest Podcast</h2>
@@ -95,8 +113,8 @@
 								'post_status' => 'publish',
 								'suppress_filters' => true );
 
-						$latest_blog = wp_get_recent_posts( $args, ARRAY_A );
-						foreach($latest_blog as $latest ){
+						$latest_podcast = wp_get_recent_posts( $args, ARRAY_A );
+						foreach($latest_podcast as $latest ){
 							echo '<div><a href="' . get_permalink($latest["ID"]) . '"><h3>' .
 									$latest["post_title"].'</h3></a><p class="postdate">' .
 									$latest["post_date"].'</p><p>' .
@@ -105,7 +123,7 @@
 						}
 						?>
 					</div>
-					<div class="current-podcast">
+					<div class="current-blog">
 						<h2>From the Blog</h2>
 
 						<?php
@@ -134,17 +152,18 @@
 				</div>
 				<div class="testimonials">
 					<div class="testimonial-wrapper">
-						<blockquote>
-							<p class="quotetext">Replace me with WP stuff</p>
-							<p class="byline">The Person</p>
-						</blockquote>
-						<div class="testimonials-more">
-							<a href="#" class="btn secondary">More Testimonials</a>
-							<div class="pns">
-								<a href="#" class="pn left nonext">&#139;</a>
-								<a href="#" class="pn right">&#155;</a>
+						<div class="testimonial">
+							<blockquote>
+								<p class="quotetext">Replace me with WP stuff</p>
+								<p class="byline">The Person</p>
+							</blockquote>
+							<div class="testimonials-more">
+								<a href="#" class="btn secondary">More Testimonials</a>
+								<div class="pns">
+									<a href="#" class="pn left nonext">&#139;</a>
+									<a href="#" class="pn right">&#155;</a>
+								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>
