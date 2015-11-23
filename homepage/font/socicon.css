@@ -11,6 +11,20 @@
 	text-transform: initial;
 }
 
+[class^="socicon-"], [class*=" socicon-"] { /* Change to your class name, eg: icon, socicon, social... */
+	font-family: 'socicon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 [class^="socicon-"],
 [class*=" socicon-"] {
 	font-family: 'socicon';
@@ -420,3 +434,4 @@
 .socicon-zerply:before {
 	content: "\4d";
 }
+

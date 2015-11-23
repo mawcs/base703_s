@@ -17,6 +17,7 @@ wp-content/plugins/hello.php
 /readme.html
 /license.txt
 
-/homepage/font/*.css
+/homepage/font/freestyle-script.css
+# /homepage/font/*.css
 /less/*.css
 style.css
