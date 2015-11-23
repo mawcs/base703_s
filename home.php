@@ -74,23 +74,62 @@
 		<div class="current-wrapper">
 			<div class="current-content">
 				<div class="current-items">
-	                <div class="current-event">
-		                <h2>Upcoming Events</h2>
-		                <div>
-			                <h3>Replace me with WP stuff</h3>
-		                </div>
-	                </div>
-					<div class="current-podcast">
-						<h2>Latest Podcast</h2>
+					<div class="current-event">
+						<h2>Upcoming Events</h2>
 						<div>
 							<h3>Replace me with WP stuff</h3>
 						</div>
 					</div>
 					<div class="current-podcast">
+						<h2>Latest Podcast</h2>
+						<?php
+
+						$catid = get_category_by_slug( 'podcast' );
+						$args = array(
+								'numberposts' => 1,
+								'offset' => 0,
+								'category' => $catid->term_id,
+								'orderby' => 'post_date',
+								'order' => 'DESC',
+								'post_type' => 'post',
+								'post_status' => 'publish',
+								'suppress_filters' => true );
+
+						$latest_blog = wp_get_recent_posts( $args, ARRAY_A );
+						foreach($latest_blog as $latest ){
+							echo '<div><a href="' . get_permalink($latest["ID"]) . '"><h3>' .
+									$latest["post_title"].'</h3></a><p class="postdate">' .
+									$latest["post_date"].'</p><p>' .
+									substr(strip_shortcodes($latest["post_content"]),0,250).'&hellip;</p><div class="readmore"><a href="' .
+									get_permalink($latest["ID"]) . '">Continue</a></div></div> ';
+						}
+						?>
+					</div>
+					<div class="current-podcast">
 						<h2>From the Blog</h2>
-						<div>
-							<h3>Replace me with WP stuff</h3>
-						</div>
+
+						<?php
+
+						$catid = get_category_by_slug( 'blog' );
+						$args = array(
+								'numberposts' => 1,
+								'offset' => 0,
+								'category' => $catid->term_id,
+								'orderby' => 'post_date',
+								'order' => 'DESC',
+								'post_type' => 'post',
+								'post_status' => 'publish',
+								'suppress_filters' => true );
+
+						$latest_blog = wp_get_recent_posts( $args, ARRAY_A );
+						foreach($latest_blog as $latest ){
+							echo '<div><a href="' . get_permalink($latest["ID"]) . '"><h3>' .
+									$latest["post_title"].'</h3></a><p class="postdate">' .
+									$latest["post_date"].'</p><p>' .
+									substr(strip_shortcodes($latest["post_content"]),0,250).'&hellip;</p><div class="readmore"><a href="' .
+									get_permalink($latest["ID"]) . '">Continue</a></div></div> ';
+						}
+						?>
 					</div>
 				</div>
 				<div class="testimonials">
