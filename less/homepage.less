@@ -227,6 +227,12 @@
 					flex-basis: 60%;
 					border-right: 1px solid @subduedtextcolor;
 
+					div{
+						.slideInLeft;
+						.animated;
+						.anim-params(0.5s);
+					}
+
 					a:visited{
 						color: white;
 					}
@@ -302,39 +308,60 @@
 						align-items: stretch;
 						justify-content: space-between;
 
-						blockquote{
-							background: transparent;
-							border: none;
-							border-left: none;
-							font-family: "Freestyle Script", cursive;
-							font-size: 3rem;
-							margin: 0;
-							padding: 0.7em;
-							width: 100%;
-							//clear: none;
-							//quotes: "\201C""\201D""\2018""\2019";
-							background-image: url(../homepage/img/bq.png);
-							background-repeat: no-repeat;
-							background-position: top left;
-							background-size: 25%;
-							min-height: 13em;
+						.testimonial{
+							overflow: hidden;
+							height: 33em;
+							max-height: 36em;
+							min-height: 36em;
 
-							p{
-								margin: 0;
-								padding: 0;
+							div{
+
+								blockquote{
+									white-space: normal;
+									background: transparent;
+									border: none;
+									border-left: none;
+									font-family: "Freestyle Script", cursive;
+									font-size: 3rem;
+									margin: 0;
+									padding: 0.7em;
+									width: 100%;
+									//clear: none;
+									//quotes: "\201C""\201D""\2018""\2019";
+									background-image: url(../homepage/img/bq.png);
+									background-repeat: no-repeat;
+									background-position: top left;
+									background-size: 25%;
+
+									p{
+										margin: 0;
+										padding: 0;
+									}
+
+									.byline{
+										display: block;
+										width: 100%;
+										font-size: 0.7em;
+										text-align: right;
+										color: fade(@buttonbordercolor, 50%);
+									}
+									.byline:before{
+										content: "\2014";
+									}
+								}
+
+								.long{
+									font-size: 0.6em;
+								}
+
+								.medium{
+									font-size: 0.8em;
+								}
 							}
 
-							.byline{
-								display: block;
-								width: 100%;
-								font-size: 0.7em;
-								text-align: right;
-								color: fade(@buttonbordercolor, 50%);
-							}
-							.byline:before{
-								content: "\2014";
-							}
+
 						}
+
 
 						.testimonials-more{
 							clear: both;

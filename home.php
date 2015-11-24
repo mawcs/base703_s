@@ -19,6 +19,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/vend/wow.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/homepage/js/p.js"></script>
 
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/homepage/font/freestyle-script.css">
@@ -74,7 +75,7 @@
 		<div class="current-wrapper">
 			<div class="current-content">
 				<div class="current-items">
-					<div class="current-event">
+					<div class="current-event ">
 						<h2>Upcoming Events</h2>
 						<?php
 
@@ -99,7 +100,7 @@
 						}
 						?>
 					</div>
-					<div class="current-podcast">
+					<div class="current-podcast ">
 						<h2>Latest Podcast</h2>
 						<?php
 
@@ -127,7 +128,7 @@
 						}
 						?>
 					</div>
-					<div class="current-blog">
+					<div class="current-blog ">
 						<h2>From the Blog</h2>
 
 						<?php
@@ -160,16 +161,34 @@
 				<div class="testimonials">
 					<div class="testimonial-wrapper">
 						<div class="testimonial">
-							<blockquote>
-								<p class="quotetext">Replace me with WP stuff</p>
-								<p class="byline">The Person</p>
-							</blockquote>
-							<div class="testimonials-more">
-								<a href="#" class="btn secondary">More Testimonials</a>
-								<div class="pns">
-									<a href="#" class="pn left nonext">&#139;</a>
-									<a href="#" class="pn right">&#155;</a>
-								</div>
+
+							<?php
+
+							$catid = get_category_by_slug( 'testimonials' );
+							$args = array(
+									'numberposts' => 5,
+									'offset' => 0,
+									'category' => $catid->term_id,
+									'orderby' => 'post_date',
+									'order' => 'DESC',
+									'post_type' => 'post',
+									'post_status' => 'publish',
+									'suppress_filters' => true );
+
+							$latest_blog = wp_get_recent_posts( $args, ARRAY_A );
+							foreach($latest_blog as $latest ){
+								$content = strip_shortcodes(preg_replace('/<img[^>]+./','',$latest["post_content"]));
+								echo '<div id="'.$latest["ID"].'">'.
+										$content.
+									 '</div> ';
+							}
+							?>
+						</div>
+						<div class="testimonials-more">
+							<a href="category/testimonials" class="btn secondary">More Testimonials</a>
+							<div class="pns">
+								<a href="javascript:void(0);" class="pn left nonext">&#139;</a>
+								<a href="javascript:void(0);" class="pn right">&#155;</a>
 							</div>
 						</div>
 					</div>
