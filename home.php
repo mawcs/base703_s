@@ -187,8 +187,8 @@
 						<div class="testimonials-more">
 							<a href="category/testimonials" class="btn secondary">More Testimonials</a>
 							<div class="pns">
-								<a href="javascript:void(0);" class="pn left nonext">&#139;</a>
-								<a href="javascript:void(0);" class="pn right">&#155;</a>
+								<span class="pn left nonext">&#139;</span>
+								<span class="pn right">&#155;</span>
 							</div>
 						</div>
 					</div>
