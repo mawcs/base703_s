@@ -95,7 +95,7 @@
 							echo '<div>'.
 									get_the_post_thumbnail($latest["ID"], "thumbnail") .
 									'<a href="'. get_permalink($latest["ID"]) .'"><h3>'. $latest["post_title"] .'</h3></a>'.
-									'<div class="register"><a href="'. get_permalink($latest["ID"]) .'">Register</a></div>'.
+									'<a class="register" href="'. get_permalink($latest["ID"]) .'">Register</a>'.
 								 '</div>';
 						}
 						?>
@@ -232,23 +232,23 @@
 
 			<div class="social-icons">
 				<!--//TODO wire these up to James' social stuff-->
-				<a href=""><span class="socicon socicon-facebook"></span></a>
-				<a href=""><span class="socicon socicon-twitter"></span></a>
-				<a href=""><span class="socicon socicon-linkedin"></span></a>
-				<a href=""><span class="socicon socicon-google"></span></a>
-				<a href=""><span class="socicon socicon-youtube"></span></a>
-				<a href=""><span class="socicon socicon-vimeo"></span></a>
-				<a href="" class="cdbabylink"><span class="socicon cdbaby">&nbsp;</span></a>
-				<a href=""><span class="socicon socicon-soundcloud"></span></a>
-				<a href=""><span class="socicon socicon-rss"></span></a>
+				<a href="https://www.facebook.com/jamesthejazzysaxman"><span class="socicon socicon-facebook"></span></a>
+				<a href="https://twitter.com/jamesthedivine"><span class="socicon socicon-twitter"></span></a>
+				<a href="https://www.linkedin.com/in/james-divine-235a9686"><span class="socicon socicon-linkedin"></span></a>
+				<a href="https://plus.google.com/u/0/104128844095888066226"><span class="socicon socicon-google"></span></a>
+				<a href="https://www.youtube.com/user/divinejames"><span class="socicon socicon-youtube"></span></a>
+				<!--<a href=""><span class="socicon socicon-vimeo"></span></a>-->
+				<a href="http://www.cdbaby.com/Artist/JamesDivine" class="cdbabylink"><span class="socicon cdbaby">&nbsp;</span></a>
+				<!--<a href=""><span class="socicon socicon-soundcloud"></span></a>-->
+				<a href="rss"><span class="socicon socicon-rss"></span></a>
 			</div>
 
 			<div class="subfooter">
 				<span class="copyright">&copy;2015 Williamson Creative, LLC. DBA 703 Creative. All Rights Reserved</span>
 				<ul class="subnav">
-					<li><a href="">Sitemap</a></li>
-					<li><a href="">Privacy</a></li>
-					<li><a href="">Terms</a></li>
+					<li><a href="sitemap">Sitemap</a></li>
+					<li><a href="privacy">Privacy</a></li>
+					<li><a href="terms">Terms</a></li>
 				</ul>
 			</div>
 
