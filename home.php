@@ -199,8 +199,14 @@
 
 	<section id="homepage-video">
 		<div class="hompage-video-wrapper">
+
 			<div class="homepage-video-content">
-THis is stuff
+				<h2>Video</h2>
+				<iframe width="1080" height="608" src="https://www.youtube.com/embed/zhrGAfSwVnc" frameborder="0" allowfullscreen></iframe>
+
+				<div>
+					<a href="media/video"><h3>More Video</h3></a>
+				</div>
 			</div>
 		</div>
 	</section>
