@@ -61,8 +61,8 @@
 					<span class="pretext">The</span> <span class="fl forgive">Forgive</span><span class="and">&</span><span class="fl Live">Live</span><span class="pretext">Experience</span>
 				</div>
 				<div class="herobuttons">
-					<a class="btn primary">Book Now</a>
-					<a class="btn secondary">Learn More</a>
+					<a href="book" class="btn primary">Book Now</a>
+					<a href="keynote" class="btn secondary">Learn More</a>
 				</div>
 				<div class="hero-subtext">
 					<p>Keynote stories of forgiveness, encouragement, and inspiration.</p>
