@@ -78,11 +78,14 @@ function testimonialsGoNextPrev(np, $button){
 
 }
 
-$(window).scroll(function(e){
-    var st = $(window).scrollTop();
-    phero(st);
-    stickmasthead(st);
+$(function(){
     new WOW().init();
+
+    $(window).scroll(function(e){
+        var st = $(window).scrollTop();
+        phero(st);
+        stickmasthead(st);
+    });
 
     catalogTestimonials();
 

@@ -54,7 +54,7 @@
 		</div>
 	</header><!-- #masthead -->
 
-	<section id="hero" class="altbg">
+	<section id="hero" class="wow altbg">
 		<div class="hero-content">
 			<div class="call-to-action-block">
 				<div class="heroheader">
@@ -75,7 +75,7 @@
 		<div class="current-wrapper">
 			<div class="current-content">
 				<div class="current-items">
-					<div class="current-event ">
+					<div class="current-event wow">
 						<h2>Upcoming Events</h2>
 						<?php
 
@@ -100,7 +100,7 @@
 						}
 						?>
 					</div>
-					<div class="current-podcast ">
+					<div class="current-podcast wow">
 						<h2>Latest Podcast</h2>
 						<?php
 
@@ -128,7 +128,7 @@
 						}
 						?>
 					</div>
-					<div class="current-blog ">
+					<div class="current-blog wow">
 						<h2>From the Blog</h2>
 
 						<?php
@@ -206,7 +206,7 @@ THis is stuff
 	</section>
 
 	<footer id="homepage-footer">
-		<div class="homepage-footer-wrapper">
+		<div class="homepage-footer-wrapper wow">
 
 			<div class="footer-logo">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">

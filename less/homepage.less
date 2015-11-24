@@ -84,6 +84,10 @@
 	#hero{
 		@herocolor: white;
 
+		.animated;
+		.anim-params(1s);
+		.fadeIn;
+
 		background-color: black;
 		height: 45em;
 		min-height: 45em;
@@ -228,9 +232,8 @@
 					border-right: 1px solid @subduedtextcolor;
 
 					div{
-						.slideInLeft;
+						.fadeInLeft;
 						.animated;
-						.anim-params(0.5s);
 					}
 
 					a:visited{
@@ -274,7 +277,7 @@
 					}
 
 					.current-event{
-						clear: both;
+						.anim-params(0.5s, 0.3s);
 
 						img {
 							float: left;
@@ -293,12 +296,23 @@
 						}
 					}
 
+					.current-podcast{
+						.anim-params(0.5s, 0.5s);
+					}
+
+					.current-blog{
+						.anim-params(0.5s, 0.7s);
+					}
 
 				}
 
 				.testimonials{
 					flex-basis: 40%;
 					height: 100%;
+
+					.animated;
+					.fadeInLeft;
+					.anim-params(0.5s);
 
 					.testimonial-wrapper{
 						padding: 2em;
@@ -427,6 +441,7 @@
 			}
 		}
 	}
+
 	#homepage-footer{
 		background-color: @footerbg;
 		color: @buttonbordercolor;
@@ -439,6 +454,10 @@
 			flex-direction: column;
 			align-items: center;
 			justify-content: space-between;
+
+			.animated;
+			.anim-params(1.1s, 0.5s);
+			.fadeIn;
 
 			.footer-logo{
 				padding: 2em;
