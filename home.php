@@ -92,6 +92,7 @@
 						$latest_event = wp_get_recent_posts( $args, ARRAY_A );
 						foreach($latest_event as $latest ){
 							echo '<div>'.
+									get_the_post_thumbnail($latest["ID"], "thumbnail") .
 									'<a href="'. get_permalink($latest["ID"]) .'"><h3>'. $latest["post_title"] .'</h3></a>'.
 									'<div class="register"><a href="'. get_permalink($latest["ID"]) .'">Register</a></div>'.
 								 '</div>';
@@ -115,10 +116,13 @@
 
 						$latest_podcast = wp_get_recent_posts( $args, ARRAY_A );
 						foreach($latest_podcast as $latest ){
-							echo '<div><a href="' . get_permalink($latest["ID"]) . '"><h3>' .
+							$content = substr(strip_shortcodes(preg_replace('/<img[^>]+./','',$latest["post_content"])),0,250);
+							echo '<div>'.
+									get_the_post_thumbnail($latest["ID"], "thumbnail") .
+									'<a href="' . get_permalink($latest["ID"]) . '"><h3>' .
 									$latest["post_title"].'</h3></a><p class="postdate">' .
 									$latest["post_date"].'</p><p>' .
-									substr(strip_shortcodes($latest["post_content"]),0,250).'&hellip;</p><div class="readmore"><a href="' .
+									$content.'&hellip;</p><div class="readmore"><a href="' .
 									get_permalink($latest["ID"]) . '">Continue</a></div></div> ';
 						}
 						?>
@@ -141,10 +145,13 @@
 
 						$latest_blog = wp_get_recent_posts( $args, ARRAY_A );
 						foreach($latest_blog as $latest ){
-							echo '<div><a href="' . get_permalink($latest["ID"]) . '"><h3>' .
+							$content = substr(strip_shortcodes(preg_replace('/<img[^>]+./','',$latest["post_content"])),0,250);
+							echo '<div>'.
+									get_the_post_thumbnail($latest["ID"], "thumbnail") .
+									'<a href="' . get_permalink($latest["ID"]) . '"><h3>' .
 									$latest["post_title"].'</h3></a><p class="postdate">' .
 									$latest["post_date"].'</p><p>' .
-									substr(strip_shortcodes($latest["post_content"]),0,250).'&hellip;</p><div class="readmore"><a href="' .
+									$content.'&hellip;</p><div class="readmore"><a href="' .
 									get_permalink($latest["ID"]) . '">Continue</a></div></div> ';
 						}
 						?>

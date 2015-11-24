@@ -3,6 +3,7 @@
 @import (once) "vars";
 @import (once) "mixins";
 
+@subduedtextcolor: darken(@buttonbordercolor, 30%);
 
 #homepage{
 	a{
@@ -11,7 +12,7 @@
 	}
 
 	a:hover, a:visited, a:active{
-		color: darken(@buttonbordercolor, 30%);
+		color: @subduedtextcolor;
 	}
 
 	.btn:visited, .btn:hover{
@@ -224,11 +225,73 @@
 
 				.current-items{
 					flex-basis: 60%;
+					border-right: 1px solid @subduedtextcolor;
+
+					a:visited{
+						color: white;
+					}
+
+					h3{
+						clear: none;
+						font-size: 1.3em;
+						margin-bottom: 0;
+					}
+
+					img {
+						max-width: 102px;
+						max-height: 102px;
+						margin: 1em;
+						margin-top: 0.2em;
+						margin-right: 4em;
+						float: right;
+					}
+
+					p{
+						margin: 0;
+					}
+
+					.postdate{
+						font-size: 0.9em;
+						color: @subduedtextcolor;
+						margin-bottom: 0.6em;
+					}
+
+					.readmore{
+						float: right;
+						position: relative;
+						top: -1.5em;
+						right: 0.6em;
+
+						a{
+							color: @subduedtextcolor;
+						}
+					}
+
+					.current-event{
+						clear: both;
+
+						img {
+							float: left;
+						}
+
+						.register{
+							.btn;
+
+							position: relative;
+							top: 2.2em;
+							float: right;
+							right: 2em;
+							width: 10em;
+							text-align: center;
+							margin-right: 2em;
+						}
+					}
+
+
 				}
 
 				.testimonials{
 					flex-basis: 40%;
-					border-left: 1px solid fade(@buttonbordercolor, 30%);
 					height: 100%;
 
 					.testimonial-wrapper{
@@ -254,6 +317,7 @@
 							background-repeat: no-repeat;
 							background-position: top left;
 							background-size: 25%;
+							min-height: 13em;
 
 							p{
 								margin: 0;
