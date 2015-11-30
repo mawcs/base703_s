@@ -508,7 +508,8 @@
 						font-size: 1.5em;
 					}
 
-					input[type=text]{
+					input[type=text], input[type=email]{
+						color: @buttonbordercolor;
 						width: 340px;
 						padding: 16px;
 						border: 2px solid fade(@buttonbordercolor, 30%);
@@ -544,6 +545,10 @@
 					}
 
 
+				}
+
+				.newsletter-message{
+					display:block;
 				}
 			}
 
@@ -586,6 +591,8 @@
 			}
 
 			.subfooter{
+
+				font-size: 0.8em;
 
 				.copyright{
 					color: fade(@buttonbordercolor, 60%);

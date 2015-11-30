@@ -222,12 +222,21 @@
 
 			<div class="newsletter-signup">
 				<h2>Forgiveness and Living in your inbox.</h2>
+
 				<div class="newsletter-form">
-<!--					//TODO integrate with James' newsletter system.-->
-					<input type="text" placeholder="Name" name="newsletter-name" id="newsletter-name">
-					<input type="text" placeholder="Email" name="newsletter-email" id="newsletter-email">
-					<input type="submit" name="newsletter-submit" id="newsletter-submit" value="Sign Up">
+					<form id="signupSubscriberForm" method="post" action="http://michaelallenwilliamson.campayn.com/contacts/signup_form_add_contact/30406" accept-charset="utf-8">
+						<input type="hidden" name="formId" value="33361">
+						<input type="text" placeholder="Name" name="first_name" id="newsletter-name" required>
+						<input type="email" placeholder="Email" name="email" id="newsletter-email" required>
+						<input type="submit" name="newsletter-submit" id="newsletter-submit" value="Sign Up">
+					</form>
 				</div>
+
+				<div class="newsletter-message">
+					<h3></h3>
+					<p></p>
+				</div>
+
 			</div>
 
 			<div class="social-icons">
