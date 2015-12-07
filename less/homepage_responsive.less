@@ -1,0 +1,131 @@
+
+@import (once) "utils";
+@import (once) "vars";
+@import (once) "mixins";
+
+
+@media screen and (min-width: 50em) {
+
+}
+
+
+@media screen and (max-width: 50em){
+
+	#homepage{
+	
+		#masthead{
+			#site-logo{
+		        width: 200px;
+		    }//#site-logo
+		}//#masthead
+		
+		
+		
+		#hero{
+			background-position: -1200px 64px;
+		
+			.hero-content{			
+				
+				.call-to-action-block{
+					width: 90vw;
+					top: 13em;
+					margin-left: auto;
+					margin-right: auto;
+					height: 14em;
+				
+					.heroheader{
+						
+						.fl, .and{
+							line-height: 1.1em;
+							padding-bottom: 0.1em;
+						}
+	
+						.pretext{
+							font-size: 1.2rem;
+							font-weight: 300;
+						}
+	
+						.fl{
+							display: inline-block;
+							font-size: 2.5rem;
+							transform: translateY(0.05em);
+						}
+	
+						.and{
+							font-size: 1.2rem;
+						}
+						
+					}//.heroheader
+					
+					.herobuttons{
+						
+						height: 6em;
+					
+						flex-direction: column;
+						justify-content: space-around;
+					
+						.btn{
+							font-size: 1.1em;
+							width: 8em;
+						}
+					}//.herobuttons
+					
+					
+					.hero-subtext{
+						font-size: 1.2em;
+						font-weight: 300;
+					}//.hero-subtext
+				
+				}//.call-to-action-block
+			
+			}//.hero-content
+		}//#hero
+
+		#currentstuff-block {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			
+			.current-wrapper{
+				.current-content{
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+						
+					.current-items{
+						
+					}//.current-items
+				}//.current-content				
+			}//.current-wrapper
+				
+		}//#currentstuff-block
+
+		#homepage-footer{
+	
+			.homepage-footer-wrapper{
+				
+				.newsletter-signup{
+	
+					h2{
+						font-size: 1.1em;
+					}//h2
+	
+					.newsletter-form{
+						text-align: center;
+						align-items: center;
+						font-size: 1.1em;	
+					}//.newsletter-form
+				}//.newsletter-signup
+	
+				.social-icons{
+					width: 100%;
+					max-width: 100%;
+					flex-wrap: wrap;
+				}//.social-icons
+			}//.homepage-footer-wrapper
+		}//#homepage-footer
+		
+		
+	}//#homepage
+}//@media screen and (max-width: 50em)
+
