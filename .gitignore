@@ -21,3 +21,6 @@ wp-content/plugins/hello.php
 # /homepage/font/*.css
 /less/*.css
 style.css
+
+.idea
+node_modules
