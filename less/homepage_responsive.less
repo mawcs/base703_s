@@ -38,22 +38,22 @@
 						.fl, .and{
 							line-height: 1.1em;
 							padding-bottom: 0.1em;
-						}
+						}//.fl, .and
 	
 						.pretext{
 							font-size: 1.2rem;
 							font-weight: 300;
-						}
+						}//.pretext
 	
 						.fl{
 							display: inline-block;
 							font-size: 2.5rem;
 							transform: translateY(0.05em);
-						}
+						}//.fl
 	
 						.and{
 							font-size: 1.2rem;
-						}
+						}//.and
 						
 					}//.heroheader
 					
@@ -67,7 +67,7 @@
 						.btn{
 							font-size: 1.1em;
 							width: 8em;
-						}
+						}//.btn
 					}//.herobuttons
 					
 					
@@ -87,14 +87,38 @@
 			justify-content: flex-start;
 			
 			.current-wrapper{
+				
+				padding: 1em;
 				.current-content{
 					flex-direction: column;
 					align-items: flex-start;
 					justify-content: flex-start;
 						
 					.current-items{
+						border-right: 0;
+						flex-basis: auto;
 						
+						.current-event{
+						
+							.register{
+								top: 0;								
+							}//.register
+						}//.current-event						
 					}//.current-items
+					
+					.testimonials{
+						flex-basis: auto;
+						height: auto;
+					
+						.testimonial-wrapper{
+							padding: 0;
+							
+							.testimonial{
+								margin-bottom: 1em;
+							
+							}//.testimonial
+						}//.testimonials-wrapper					
+					}//.testimonials
 				}//.current-content				
 			}//.current-wrapper
 				
@@ -128,4 +152,11 @@
 		
 	}//#homepage
 }//@media screen and (max-width: 50em)
+
+
+
+
+
+
+
 
