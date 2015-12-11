@@ -9,13 +9,47 @@
 }//@media screen and (min-width: 50em) 
 
 
+
+
 @media screen and (max-width: 50em){
 
 	#homepage{
 	
 		#masthead{
+			height: 42px;
+			max-height: 42px;		
+				
+			.main-navigation{
+				font-size: 0.9em;
+			
+				.menu-toggle, .menu-toggle:active{
+					
+					z-index: 10;
+				
+				}//.menu-toggle
+			
+				.menu-main-menu-container{
+					
+				}//.menu-main-menu-container
+			}//#site-navigation
+			
+			#site-navigation.toggled{
+				background-color: black;
+			
+				.menu-toggle{
+				
+				}//.menu-toggle
+			
+				.menu-main-menu-container{
+					
+				}//.menu-main-menu-container
+			}//#site-navigation
+			
+			
 			#site-logo{
-		        width: 200px;
+				position: absolute;
+				top: 0;
+				width: 100px; //TODO resize on scroll
 		    }//#site-logo
 		}//#masthead
 		
@@ -95,7 +129,7 @@
 						.current-event{
 						
 							.register{
-								top: 0;								
+								top: 1em;								
 							}//.register
 						}//.current-event						
 					}//.current-items
@@ -134,7 +168,7 @@
 	
 					iframe{
 						width: 90%;
-						height: auto;
+						
 						margin-bottom: 1em;
 					}//iframe
 					
@@ -163,9 +197,13 @@
 					}//h2
 	
 					.newsletter-form{
-						text-align: center;
-						align-items: center;
-						font-size: 1.1em;	
+						font-size: 1.1em;
+					
+						form{
+							flex-direction: column;
+							text-align: center;
+							align-items: center;
+						}//form
 					}//.newsletter-form
 				}//.newsletter-signup
 	
@@ -200,55 +238,10 @@
 
 @media screen and (max-width: 30em){
 	#homepage{
-	
-		#masthead{
-			#site-logo{
-		        
-		    }//#site-logo
-		}//#masthead
-		
 		#hero{
-			
-		
-			.hero-content{			
-				
+			.hero-content{
 				.call-to-action-block{
-					
-					top: 13em;
-				
-					.heroheader{
-						
-						.fl, .and{
-							
-						}//.fl, .and
-	
-						.pretext{
-							
-						}//.pretext
-	
-						.fl{
-							
-						}//.fl
-	
-						.and{
-							
-						}//.and
-						
-					}//.heroheader
-					
-					.herobuttons{
-						
-						
-					
-						.btn{
-							
-						}//.btn
-					}//.herobuttons
-					
-					
-					.hero-subtext{
-						
-					}//.hero-subtext
+					top: 13em;					
 				}//.call-to-action-block
 			}//.hero-content
 		}//#hero
