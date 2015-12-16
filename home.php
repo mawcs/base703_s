@@ -58,14 +58,13 @@
 		<div class="hero-content">
 			<div class="call-to-action-block">
 				<div class="heroheader">
-					<span class="pretext">The</span> <span class="fl forgive">Forgive</span><span class="and">&</span><span class="fl Live">Live</span><span class="pretext">Experience</span>
+					
 				</div>
 				<div class="herobuttons">
-					<a href="book" class="btn primary">Book Now</a>
 					<a href="keynote" class="btn secondary">Learn More</a>
 				</div>
 				<div class="hero-subtext">
-					<p>Keynote stories of forgiveness, encouragement, and inspiration.</p>
+					
 				</div>
 			</div>
 		</div>
@@ -74,125 +73,10 @@
 	<section id="currentstuff-block">
 		<div class="current-wrapper">
 			<div class="current-content">
-				<div class="current-items">
-					<div class="current-event wow">
-						<h2>Upcoming Events</h2>
-						<?php
-
-						$catid = get_category_by_slug( 'events' );
-						$args = array(
-								'numberposts' => 1,
-								'offset' => 0,
-								'category' => $catid->term_id,
-								'orderby' => 'post_date',
-								'order' => 'DESC',
-								'post_type' => 'post',
-								'post_status' => 'publish',
-								'suppress_filters' => true );
-
-						$latest_event = wp_get_recent_posts( $args, ARRAY_A );
-						foreach($latest_event as $latest ){
-							echo '<div>'.
-									get_the_post_thumbnail($latest["ID"], "thumbnail") .
-									'<a href="'. get_permalink($latest["ID"]) .'"><h3>'. $latest["post_title"] .'</h3></a>'.
-									'<a class="register" href="'. get_permalink($latest["ID"]) .'">Register</a>'.
-								 '</div>';
-						}
-						?>
-					</div>
-					<div class="current-podcast wow">
-						<h2>Latest Podcast</h2>
-						<?php
-
-						$catid = get_category_by_slug( 'podcast' );
-						$args = array(
-								'numberposts' => 1,
-								'offset' => 0,
-								'category' => $catid->term_id,
-								'orderby' => 'post_date',
-								'order' => 'DESC',
-								'post_type' => 'post',
-								'post_status' => 'publish',
-								'suppress_filters' => true );
-
-						$latest_podcast = wp_get_recent_posts( $args, ARRAY_A );
-						foreach($latest_podcast as $latest ){
-							$content = substr(strip_shortcodes(preg_replace('/<img[^>]+./','',$latest["post_content"])),0,250);
-							echo '<div>'.
-									get_the_post_thumbnail($latest["ID"], "thumbnail") .
-									'<a href="' . get_permalink($latest["ID"]) . '"><h3>' .
-									$latest["post_title"].'</h3></a><p class="postdate">' .
-									$latest["post_date"].'</p><p>' .
-									$content.'&hellip;</p><div class="readmore"><a href="' .
-									get_permalink($latest["ID"]) . '">Continue</a></div></div> ';
-						}
-						?>
-					</div>
-					<div class="current-blog wow">
-						<h2>From the Blog</h2>
-
-						<?php
-
-						$catid = get_category_by_slug( 'blog' );
-						$args = array(
-								'numberposts' => 1,
-								'offset' => 0,
-								'category' => $catid->term_id,
-								'orderby' => 'post_date',
-								'order' => 'DESC',
-								'post_type' => 'post',
-								'post_status' => 'publish',
-								'suppress_filters' => true );
-
-						$latest_blog = wp_get_recent_posts( $args, ARRAY_A );
-						foreach($latest_blog as $latest ){
-							$content = substr(strip_shortcodes(preg_replace('/<img[^>]+./','',$latest["post_content"])),0,250);
-							echo '<div>'.
-									get_the_post_thumbnail($latest["ID"], "thumbnail") .
-									'<a href="' . get_permalink($latest["ID"]) . '"><h3>' .
-									$latest["post_title"].'</h3></a><p class="postdate">' .
-									$latest["post_date"].'</p><p>' .
-									$content.'&hellip;</p><div class="readmore"><a href="' .
-									get_permalink($latest["ID"]) . '">Continue</a></div></div> ';
-						}
-						?>
-					</div>
-				</div>
-				<div class="testimonials">
-					<div class="testimonial-wrapper">
-						<div class="testimonial">
-
-							<?php
-
-							$catid = get_category_by_slug( 'testimonials' );
-							$args = array(
-									'numberposts' => 5,
-									'offset' => 0,
-									'category' => $catid->term_id,
-									'orderby' => 'post_date',
-									'order' => 'DESC',
-									'post_type' => 'post',
-									'post_status' => 'publish',
-									'suppress_filters' => true );
-
-							$latest_blog = wp_get_recent_posts( $args, ARRAY_A );
-							foreach($latest_blog as $latest ){
-								$content = strip_shortcodes(preg_replace('/<img[^>]+./','',$latest["post_content"]));
-								echo '<div id="'.$latest["ID"].'">'.
-										$content.
-									 '</div> ';
-							}
-							?>
-						</div>
-						<div class="testimonials-more">
-							<a href="category/testimonials" class="btn secondary">More Testimonials</a>
-							<div class="pns">
-								<span class="pn left nonext">&#139;</span>
-								<span class="pn right">&#155;</span>
-							</div>
-						</div>
-					</div>
-				</div>
+				<h2>Current Stuff</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu bibendum arcu, vitae commodo dui. Nullam cursus, orci dignissim accumsan malesuada, nisi arcu blandit lacus, at pulvinar nisl leo sit amet tortor. Etiam lacinia, nisl a ornare gravida, enim orci egestas nibh, in iaculis metus diam a arcu. Praesent blandit tempor tellus, eleifend eleifend mauris sagittis at. Praesent placerat nulla et nisl hendrerit efficitur. Etiam vel pellentesque lectus. Ut tellus ligula, eleifend nec tellus at, sodales varius turpis.</p>
+				<p>Aenean purus diam, commodo non dignissim ut, eleifend nec mauris. Nullam varius suscipit metus vel viverra. Duis semper sagittis orci, ac sodales lectus scelerisque vel. Nullam nec maximus tortor. Proin vel risus in urna tempus posuere et eget erat. Vestibulum sit amet velit metus. Etiam mauris ipsum, pellentesque ut ullamcorper semper, varius consectetur felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque nulla velit, volutpat eget orci id, sodales ultrices sem.</p>
+			
 			</div>
 		</div>
 	</section>
@@ -201,12 +85,10 @@
 		<div class="hompage-video-wrapper">
 
 			<div class="homepage-video-content">
-				<h2>Video</h2>
-				<iframe src="https://www.youtube.com/embed/zhrGAfSwVnc" frameborder="0" allowfullscreen></iframe>
-
-				<div>
-					<a href="media/video"><h3>More Video</h3></a>
-				</div>
+				<h2>Video Stuff</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu bibendum arcu, vitae commodo dui. Nullam cursus, orci dignissim accumsan malesuada, nisi arcu blandit lacus, at pulvinar nisl leo sit amet tortor. Etiam lacinia, nisl a ornare gravida, enim orci egestas nibh, in iaculis metus diam a arcu. Praesent blandit tempor tellus, eleifend eleifend mauris sagittis at. Praesent placerat nulla et nisl hendrerit efficitur. Etiam vel pellentesque lectus. Ut tellus ligula, eleifend nec tellus at, sodales varius turpis.</p>
+				<p>Aenean purus diam, commodo non dignissim ut, eleifend nec mauris. Nullam varius suscipit metus vel viverra. Duis semper sagittis orci, ac sodales lectus scelerisque vel. Nullam nec maximus tortor. Proin vel risus in urna tempus posuere et eget erat. Vestibulum sit amet velit metus. Etiam mauris ipsum, pellentesque ut ullamcorper semper, varius consectetur felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque nulla velit, volutpat eget orci id, sodales ultrices sem.</p>
+			
 			</div>
 		</div>
 	</section>
@@ -221,7 +103,7 @@
 			</div>
 
 			<div class="newsletter-signup">
-				<h2>Forgiveness and Living in your inbox.</h2>
+				<h2>Sign up for our newsletter.</h2>
 
 				<div class="newsletter-form">
 					<form id="signupSubscriberForm" method="post" action="http://michaelallenwilliamson.campayn.com/contacts/signup_form_add_contact/30406" accept-charset="utf-8">
@@ -241,13 +123,12 @@
 
 			<div class="social-icons">
 				<!--//TODO wire these up to James' social stuff-->
-				<a href="https://www.facebook.com/jamesthejazzysaxman"><span class="socicon socicon-facebook"></span></a>
-				<a href="https://twitter.com/jamesthedivine"><span class="socicon socicon-twitter"></span></a>
-				<a href="https://www.linkedin.com/in/james-divine-235a9686"><span class="socicon socicon-linkedin"></span></a>
-				<a href="https://plus.google.com/u/0/104128844095888066226"><span class="socicon socicon-google"></span></a>
-				<a href="https://www.youtube.com/user/divinejames"><span class="socicon socicon-youtube"></span></a>
+				<a href="https://www.facebook.com/___"><span class="socicon socicon-facebook"></span></a>
+				<a href="https://twitter.com/___"><span class="socicon socicon-twitter"></span></a>
+				<a href="https://www.linkedin.com/in/___"><span class="socicon socicon-linkedin"></span></a>
+				<a href="https://plus.google.com/u/0/___"><span class="socicon socicon-google"></span></a>
+				<a href="https://www.youtube.com/user/___"><span class="socicon socicon-youtube"></span></a>
 				<!--<a href=""><span class="socicon socicon-vimeo"></span></a>-->
-				<a href="http://www.cdbaby.com/Artist/JamesDivine" class="cdbabylink"><span class="socicon cdbaby">&nbsp;</span></a>
 				<!--<a href=""><span class="socicon socicon-soundcloud"></span></a>-->
 				<a href="rss"><span class="socicon socicon-rss"></span></a>
 			</div>
