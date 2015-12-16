@@ -1,0 +1,257 @@
+
+@import (once) "utils";
+@import (once) "vars";
+@import (once) "mixins";
+
+
+@media screen and (min-width: 50em) {
+
+}//@media screen and (min-width: 50em) 
+
+
+
+
+@media screen and (max-width: 50em){
+
+	#homepage{
+	
+		#masthead{
+			height: 42px;
+			max-height: 42px;		
+				
+			.main-navigation{
+				font-size: 0.9em;
+			
+				.menu-toggle, .menu-toggle:active{
+					
+					z-index: 10;
+				
+				}//.menu-toggle
+			
+				.menu-main-menu-container{
+					
+				}//.menu-main-menu-container
+			}//#site-navigation
+			
+			#site-navigation.toggled{
+				background-color: black;
+			
+				.menu-toggle{
+				
+				}//.menu-toggle
+			
+				.menu-main-menu-container{
+					
+				}//.menu-main-menu-container
+			}//#site-navigation
+			
+			
+			#site-logo{
+				position: absolute;
+				top: 0;
+				width: 100px; //TODO resize on scroll
+		    }//#site-logo
+		}//#masthead
+		
+		#hero{
+			background-position: -800px 64px;
+		
+			.hero-content{			
+				
+				.call-to-action-block{
+					width: 90vw;
+					top: -2em;
+					margin-left: auto;
+					margin-right: auto;
+					height: 14em;
+				
+					.heroheader{
+						
+						.fl, .and{
+							line-height: 1.1em;
+							padding-bottom: 0.1em;
+						}//.fl, .and
+	
+						.pretext{
+							font-size: 1.2rem;
+							font-weight: 300;
+						}//.pretext
+	
+						.fl{
+							display: inline-block;
+							font-size: 2.5rem;
+							transform: translateY(0.05em);
+						}//.fl
+	
+						.and{
+							font-size: 1.2rem;
+						}//.and
+					}//.heroheader
+					
+					.herobuttons{
+						
+						height: 6em;
+					
+						flex-direction: column;
+						justify-content: space-around;
+					
+						.btn{
+							font-size: 1.1em;
+							width: 8em;
+						}//.btn
+					}//.herobuttons
+					
+					.hero-subtext{
+						font-size: 1.2em;
+						font-weight: 300;
+					}//.hero-subtext
+				}//.call-to-action-block
+			}//.hero-content
+		}//#hero
+
+		#currentstuff-block {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			
+			.current-wrapper{
+				
+				padding: 1em;
+				.current-content{
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+						
+					.current-items{
+						border-right: 0;
+						flex-basis: auto;
+						
+						.current-event{
+						
+							.register{
+								top: 1em;								
+							}//.register
+						}//.current-event						
+					}//.current-items
+					
+					.testimonials{
+						flex-basis: auto;
+						height: auto;
+					
+						.testimonial-wrapper{
+							padding: 0;
+							
+							.testimonial{
+								margin-bottom: 1em;
+							
+							}//.testimonial
+						}//.testimonials-wrapper					
+					}//.testimonials
+				}//.current-content				
+			}//.current-wrapper
+		}//#currentstuff-block
+		
+		#homepage-video{
+	
+			.hompage-video-wrapper{
+	
+				.homepage-video-content{
+	
+					h2{
+					
+					}//h2
+	
+					h3{
+					
+					}//h3
+	
+	
+					iframe{
+						width: 90%;
+						
+						margin-bottom: 1em;
+					}//iframe
+					
+					div{
+						
+						a{
+							
+							h3{			
+							
+							}//h3
+						}//a
+					}//div
+				}//.homepage-video-content
+			}//.hompage-video-wrapper
+		}//#homepage-video
+		
+
+		#homepage-footer{
+	
+			.homepage-footer-wrapper{
+				
+				.newsletter-signup{
+	
+					h2{
+						font-size: 1.1em;
+					}//h2
+	
+					.newsletter-form{
+						font-size: 1.1em;
+					
+						form{
+							flex-direction: column;
+							text-align: center;
+							align-items: center;
+						}//form
+					}//.newsletter-form
+				}//.newsletter-signup
+	
+				.social-icons{
+					width: 100%;
+					max-width: 100%;
+					flex-wrap: wrap;
+				}//.social-icons
+			
+				.subfooter{
+					span{
+						display: block;
+						width: 90%;
+						margin-left: auto;					
+						margin-right: auto;
+						text-align: center;
+					}//span
+		
+					ul{
+						display: block;
+						width: 100%;
+						text-align: center;
+						padding-left: 0;
+						margin-top: 0.7em;
+					}//ul
+				}//.subfooter
+			}//.homepage-footer-wrapper
+		}//#homepage-footer		
+	}//#homepage
+}//@media screen and (max-width: 50em)
+
+
+@media screen and (max-width: 30em){
+	#homepage{
+		#hero{
+			background-position: -1200px 64px;
+			
+			.hero-content{
+				.call-to-action-block{
+					top: 13em;					
+				}//.call-to-action-block
+			}//.hero-content
+		}//#hero
+	}//#homepage
+}//@media screen and (max-width: 30em)
+
+
+
+
+
+

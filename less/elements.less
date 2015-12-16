@@ -21,35 +21,6 @@ body {
 	background-size: cover;
 }
 
-blockquote:before,
-q:before {
-	font-family: serif;
-	color: @footercolor;
-	content: open-quote;
-	font-size: 4em;
-	line-height: 0.1em;
-	margin-right: 0.25em;
-	position: relative;
-	top: 0.35em;
-	display: inline;
-	float: left;
-}
-
-blockquote:after,
-q:after {
-	content: "";
-}
-
-blockquote,
-q {
-	clear: both;
-	width: 80%;
-	background: fade(@footercolor, 20%);
-	border-left: 2px solid @footercolor;
-	margin: 1.5em 10px;
-	padding: 0.5em 10px;
-	quotes: "\201C""\201D""\2018""\2019";
-}
 
 hr {
 	background-color: #ccc;
@@ -95,3 +66,11 @@ table {
 	width: 100%;
 }
 
+.btn.secondary{
+	background: transparent;
+}
+
+.btn:hover{
+	background: @buttonhoverbgcolor;
+	color: @buttonbordercolor;
+}
