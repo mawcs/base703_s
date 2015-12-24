@@ -54,7 +54,7 @@
 		</div>
 	</header><!-- #masthead -->
 
-	<section id="hero" class="wow altbg">
+	<section id="hero" class="wow">
 		<div class="hero-content">
 			<div class="call-to-action-block">
 				<div class="heroheader">
@@ -224,8 +224,8 @@
 				<h2>Forgiveness and Living in your inbox.</h2>
 
 				<div class="newsletter-form">
-					<form id="signupSubscriberForm" method="post" action="http://michaelallenwilliamson.campayn.com/contacts/signup_form_add_contact/30406" accept-charset="utf-8">
-						<input type="hidden" name="formId" value="33361">
+					<form id="signupSubscriberForm" method="post" action="http://jamesdivinenet.campayn.com/contacts/signup_form_add_contact/36569" accept-charset="utf-8">
+						<input type="hidden" name="formId" value="38699">
 						<input type="text" placeholder="Name" name="first_name" id="newsletter-name" required>
 						<input type="email" placeholder="Email" name="email" id="newsletter-email" required>
 						<input type="submit" name="newsletter-submit" id="newsletter-submit" value="Sign Up">
@@ -240,7 +240,6 @@
 			</div>
 
 			<div class="social-icons">
-				<!--//TODO wire these up to James' social stuff-->
 				<a href="https://www.facebook.com/jamesthejazzysaxman"><span class="socicon socicon-facebook"></span></a>
 				<a href="https://twitter.com/jamesthedivine"><span class="socicon socicon-twitter"></span></a>
 				<a href="https://www.linkedin.com/in/james-divine-235a9686"><span class="socicon socicon-linkedin"></span></a>
