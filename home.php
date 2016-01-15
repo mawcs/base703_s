@@ -117,9 +117,10 @@
 
 						$latest_podcast = wp_get_recent_posts( $args, ARRAY_A );
 						foreach($latest_podcast as $latest ){
-							$content = substr(strip_shortcodes(preg_replace('/<img[^>]+./','',$latest["post_content"])),0,250);
+							$content = substr(strip_shortcodes(preg_replace('/<img[^>]+./','', wp_strip_all_tags($latest["post_content"], false))),0,200);
+							$thumb = get_the_post_thumbnail($latest["ID"], "thumbnail");
 							echo '<div>'.
-									get_the_post_thumbnail($latest["ID"], "thumbnail") .
+									$thumb .
 									'<a href="' . get_permalink($latest["ID"]) . '"><h3>' .
 									$latest["post_title"].'</h3></a><p class="postdate">' .
 									$latest["post_date"].'</p><p>' .
@@ -146,9 +147,10 @@
 
 						$latest_blog = wp_get_recent_posts( $args, ARRAY_A );
 						foreach($latest_blog as $latest ){
-							$content = substr(strip_shortcodes(preg_replace('/<img[^>]+./','',$latest["post_content"])),0,250);
+							$content = substr(strip_shortcodes(preg_replace('/<img[^>]+./','', wp_strip_all_tags($latest["post_content"], false))),0,200);
+							$thumb = get_the_post_thumbnail($latest["ID"], "thumbnail");
 							echo '<div>'.
-									get_the_post_thumbnail($latest["ID"], "thumbnail") .
+									$thumb .
 									'<a href="' . get_permalink($latest["ID"]) . '"><h3>' .
 									$latest["post_title"].'</h3></a><p class="postdate">' .
 									$latest["post_date"].'</p><p>' .
