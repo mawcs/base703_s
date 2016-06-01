@@ -3,20 +3,20 @@
 @import (once) "vars";
 @import (once) "mixins";
 
-@subduedtextcolor: darken(@buttonbordercolor, 30%);
+@subduedtextcolor: darken(@headercolor, 10%);
 
 #homepage{
 	a{
-		color: @buttonbordercolor;
+		color: @subduedtextcolor;
 		text-decoration: none;
 	}
 
 	a:hover, a:visited, a:active{
-		color: @subduedtextcolor;
+		color: @headercolor;
 	}
 
 	.btn:visited, .btn:hover{
-		color: @buttonbordercolor;
+		color: @headercolor;
 	}
 
 	h2, h3{
@@ -36,7 +36,7 @@
 		top: 0;
 		left: 0;
 		margin-bottom: 0;
-		background-color: black;
+		background-color: @headerbg;
 		height: 64px;
 		max-height: 64px;
 		transition: height @mastheadtransitiontime, max-height @mastheadtransitiontime;
@@ -88,10 +88,10 @@
 		.anim-params(1s);
 		.fadeIn;
 
-		background-color: black;
+		background-color: @maincolor;
 		height: 45em;
 		min-height: 45em;
-		background-image: url(../homepage/img/jd_speaking.jpg);
+		background-image: url(../homepage/img/);
 		background-repeat: no-repeat;
 		background-position: center 64px;
 		background-size: cover ;
@@ -134,7 +134,7 @@
 					}
 
 					.fl, .and{
-						font-family: "Freestyle Script", cursive;
+						font-family: "Raleway", sans-serif;
 						line-height: 1.1em;
 						padding-bottom: 0.1em;
 					}
@@ -185,7 +185,7 @@
 	}
 
 	#hero.altbg{
-		background-image: url(../homepage/img/jd_speaking_alt.jpg);
+		background-image: url(../homepage/img/);
 	}
 
 
@@ -193,7 +193,7 @@
 		margin-top: 45em;
 		height: 100%;
 		background-color: @altcolor;
-		background-image: url(../homepage/img/crowd-of-people.jpg);
+		background-image: url(../homepage/img/);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
@@ -338,14 +338,14 @@
 									background: transparent;
 									border: none;
 									border-left: none;
-									font-family: "Freestyle Script", cursive;
+									font-family: "Raleway", sans-serif;
 									font-size: 3rem;
 									margin: 0;
 									padding: 0.7em;
 									width: 100%;
 									//clear: none;
 									//quotes: "\201C""\201D""\2018""\2019";
-									background-image: url(../homepage/img/bq.png);
+									background-image: url(../homepage/img/);
 									background-repeat: no-repeat;
 									background-position: top left;
 									background-size: 25%;
@@ -421,7 +421,7 @@
 
 	#homepage-video{
 
-		background-image: url(../homepage/img/podium.jpg);
+		background-image: url(../homepage/img/);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
@@ -604,7 +604,7 @@
 				}
 
 				.cdbaby{
-					background-image: url(../homepage/img/cdbaby.png);
+					background-image: url(../homepage/img/);
 					background-repeat: no-repeat;
 					background-attachment: inherit;
 					background-position: center center;
